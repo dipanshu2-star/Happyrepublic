@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <style>
-/* Copy CSS code here */
-  </style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Republic Day</title>
+  <title>Happy Republic Day 2025</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -28,43 +25,39 @@
       padding: 50px 20px;
     }
     h1 {
-      font-size: 50px;
+      font-size: 40px;
       color: #138808;
     }
     h2 {
-      font-size: 28px;
+      font-size: 24px;
       color: #FF9933;
     }
-    .flag {
-      margin: 20px auto;
-      border: 1px solid #000;
+    .input-container {
+      margin: 20px;
+    }
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #138808;
+      border-radius: 5px;
       width: 300px;
-      height: 200px;
-      position: relative;
     }
-    .flag div {
-      height: 33.33%;
-    }
-    .saffron {
-      background-color: #FF9933;
-    }
-    .white {
-      background-color: #FFFFFF;
-      position: relative;
-    }
-    .green {
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
       background-color: #138808;
+      color: white;
+      cursor: pointer;
     }
-    .ashoka-chakra {
-      width: 50px;
-      height: 50px;
-      border: 3px solid #000080;
-      border-radius: 50%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: white;
+    button:hover {
+      background-color: #0f6d06;
+    }
+    .message {
+      margin-top: 20px;
+      font-size: 24px;
+      color: #000;
     }
     footer {
       margin-top: 20px;
@@ -76,22 +69,30 @@
 </head>
 <body>
   <header>
-    <h1>Happy Republic Day!</h1>
+    <h1>Happy Republic Day 2025!</h1>
   </header>
   <div class="content">
     <h1>Vande Mataram!</h1>
-    <h2>Let's celebrate the spirit of India</h2>
-    <div class="flag">
-      <div class="saffron"></div>
-      <div class="white">
-        <div class="ashoka-chakra"></div>
-      </div>
-      <div class="green"></div>
+    <h2>Enter your name to get a personalized greeting</h2>
+    <div class="input-container">
+      <input type="text" id="nameInput" placeholder="Enter your name">
+      <button onclick="displayGreeting()">Submit</button>
     </div>
-    <p>“Be the change you wish to see in the world.” – Mahatma Gandhi</p>
+    <div class="message" id="greetingMessage"></div>
   </div>
   <footer>
-    <p>🇮🇳 Jai Hind! | Proud to be Indian 🇮🇳</p>
+    <p>🇮🇳 Jai Hind! Proud to be Indian 🇮🇳</p>
   </footer>
+  <script>
+    function displayGreeting() {
+      const name = document.getElementById('nameInput').value;
+      const message = document.getElementById('greetingMessage');
+      if (name) {
+        message.innerHTML = `Dear <strong>${name}</strong>,<br> Wishing you a very Happy Republic Day 2025! 🇮🇳`;
+      } else {
+        message.innerHTML = "Please enter your name to get a personalized greeting!";
+      }
+    }
+  </script>
 </body>
 </html>
